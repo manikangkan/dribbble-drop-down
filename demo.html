@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        cursor: pointer;
+        height: 100vh;
+        display: grid;
+        place-content: center;
+        font-family: "Montserrat";
+        font-size: 1.5rem;
+        color: #fff;
+        overflow: hidden;
+      }
+      .wrapper {
+        width: 20rem;
+        padding: 1rem 2rem;
+        background: purple;
+        border-radius: 1.2rem;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .wrapper:hover {
+        transform: scale(1.01);
+        border: 0.5rem solid rgb(255, 210, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <p>Do not click outside of me or you'll lose me!!</p>
+    </div>
+    <script>
+      const handler = document.querySelector(".wrapper");
+
+      document.addEventListener("click", (e) => {
+        if (e.target.closest(".wrapper")) return;
+        handler.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
