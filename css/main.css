@@ -153,6 +153,7 @@ hr {
   padding: 1rem 2rem;
   background: #ff0077;
   border: none;
+  outline: none;
   border: 0.5rem solid whitesmoke;
 }
 
